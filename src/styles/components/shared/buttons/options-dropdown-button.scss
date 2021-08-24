@@ -1,0 +1,19 @@
+.dropdown-option-item {
+  @extend .dark-grey-link;
+  align-items: center;
+  display: flex;
+  height: 30px;
+  padding: 0 5px;
+  &.template_button {
+    &:hover {
+      color: #a2a2a2;
+      cursor: initial;
+    }
+    position: relative;
+    margin-bottom: 15px;
+    > :last-child {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

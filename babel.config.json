@@ -1,0 +1,62 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "targets": "defaults", "modules": false }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "relay",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-flow-strip-types",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-proposal-function-sent",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-proposal-numeric-separator",
+    "@babel/plugin-proposal-throw-expressions",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-import-meta",
+    ["@babel/plugin-proposal-class-properties", { "loose": false }],
+    "@babel/plugin-proposal-json-strings",
+    "react-hot-loader/babel",
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "Enums": "./src/enums",
+          "Utils": "./src/utils",
+          "AppConstants": "./src/constants",
+          "Actions": "./src/actions",
+          "Components": "./src/components",
+          "Lib": "./src/lib",
+          "Src": "./src"
+        }
+      }
+    ],
+    [
+      "babel-plugin-import",
+      {
+        "libraryName": "lodash",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      },
+      "lodash"
+    ],
+    [
+      "babel-plugin-import",
+      {
+        "libraryName": "async",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      },
+      "async"
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["@babel/preset-env", { "targets": "defaults" }],
+        "@babel/preset-react"
+      ]
+    }
+  }
+}

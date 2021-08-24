@@ -1,0 +1,76 @@
+.domain-update-form-page {
+  .container-fluid {
+    background-color: #fff;
+    border: none;
+    font-weight: 800;
+    font-size: 16px;
+
+    .navbar-fixed-top {
+      border: none;
+    }
+
+    .nav {
+      border: none;
+      margin-left: -15px;
+
+      & > li {
+        & > a {
+          color: #6c6c6c;
+          border-top-left-radius: 15px;
+        }
+      }
+    }
+  }
+
+  .border-radius {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+
+  .buttons {
+    margin-top: 12px;
+
+    .btn-alt {
+      text-transform: capitalize;
+      margin: 4px 8px;
+    }
+
+    .btn-alt {
+      &.danger {
+        color: #c34c65;
+        box-shadow: 0 0 0 1.5px #ad606b;
+      }
+    }
+  }
+
+  .carousel {
+    .main-form-content-nav {
+      li {
+        font-size: 14px;
+
+        a {
+          font-size: 14px;
+          color: #bfc2c1;
+        }
+
+        &.active {
+          a {
+            background: none;
+            color: #848786;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .form-control {
+        &[disabled] {
+          background-color: #f8fbfa;
+        }
+      }
+
+      .input-group-addon {
+        background-color: #f8fbfa;
+      }
+    }
+  }
+}

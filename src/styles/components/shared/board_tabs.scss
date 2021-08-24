@@ -1,0 +1,231 @@
+.board-tabs {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.board-tabs__tabs-header-container {
+  padding-left: 35px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+}
+
+.board-tabs__tab-header {
+  background-color: #2e3037;
+  color: #777777;
+  padding: 11px 10px;
+  min-width: 90px;
+  margin-right: 8px;
+  margin-top: 8px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  line-height: 16px;
+  height: 38px;
+  white-space: nowrap;
+  position: relative;
+  top: 1px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: -10px;
+    width: 10px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  &.board-tabs__tab-header--active {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+  }
+
+  .icon-container {
+    width: 16px;
+    height: 16px;
+    margin: 1px 0 0 10px;
+    flex-basis: auto;
+    i {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+
+  &:not(:hover) {
+    .icon-container {
+      visibility: hidden;
+    }
+  }
+
+  form {
+    input {
+      padding: 0 !important;
+      line-height: unset;
+    }
+  }
+}
+
+.tool-STARTER .board-tabs + .content-container .starter_container {
+  padding-top: 20px;
+}
+
+.tool-CANVAS .board-tabs {
+  margin-bottom: 15px;
+}
+
+.tool-GRID .board-tabs {
+  margin-bottom: 20px;
+}
+
+.tool-ACTION_PLAN .board-tabs,
+.tool-MY_TASKS .board-tabs {
+  margin-bottom: 30px;
+  & + .content-container {
+    .ActionPlan {
+      padding-top: 0px;
+    }
+    .ActionPlan-board {
+      padding-top: 0px;
+    }
+    .sheet-board {
+      padding-top: 10px;
+    }
+  }
+}
+
+.tool-NOTEBOOK .board-tabs {
+  margin-bottom: 25px;
+}
+
+.tool-KNOWLEDGE_BASE .board-tabs {
+  margin-bottom: 25px;
+}
+
+.tool-TOPIC_TILES .board-tabs {
+  margin-bottom: 25px;
+}
+
+.tool-SITUATION_ROOM .board-tabs {
+  margin-bottom: 0px;
+  & + .content-container {
+    .situation_room-tool {
+      padding-top: 35px;
+    }
+  }
+}
+
+.tool-GOAL_BOARDS .board-tabs {
+  margin-bottom: 0;
+}
+
+.tool-MY_DAY .board-tabs {
+  margin-bottom: 32px;
+}
+
+.tool-MY_RESULTS .board-tabs,
+.tool-TEAM_RESULTS .board-tabs,
+.tool-PROJECT_RESULTS .board-tabs {
+  margin-bottom: 20px;
+}
+
+.tool-MY_NOTES .board-tabs {
+  margin-bottom: 25px;
+}
+
+.tool-PROJECT_HUB .board-tabs {
+  margin-bottom: 0;
+  & + .content-container {
+    .project-hub-tool {
+      padding-top: 30px;
+    }
+  }
+}
+
+.tool-PROJECT .board-tabs {
+  margin-bottom: 0;
+  & + .content-container {
+    .project-tool {
+      padding-top: 30px;
+    }
+  }
+}
+
+.tool-KANBAN .board-tabs {
+  margin-bottom: 25px;
+}
+
+.tool-PRIORITIZE .board-tabs {
+  margin-bottom: 36px;
+}
+
+.tool-GOAL .board-tabs {
+  margin-bottom: 20px;
+}
+
+.tool-PLANNING .board-tabs {
+  margin-bottom: 10px;
+}
+
+.tool-ESTIMATION .board-tabs {
+  margin-bottom: 25px;
+}
+
+.tool-TRACKER .board-tabs {
+  margin-bottom: 30px;
+}
+
+.tool-MESSAGE_BOARD .board-tabs {
+  margin-bottom: 0;
+  & + .content-container {
+    .message-board-board {
+      padding-top: 0;
+    }
+  }
+}
+
+.tool-FEED .board-tabs {
+  margin-bottom: 10px;
+}
+
+.tool-WIKI .board-tabs {
+  margin-bottom: 35px;
+}
+
+.tool-PAGES .board-tabs {
+  margin-bottom: 0;
+}
+
+.tool-SMALL_GRID .board-tabs {
+  margin-bottom: 25px;
+}
+
+.tool-CARD .board-tabs {
+  margin-bottom: 20px;
+}
+
+.tool-DOCUMENT .board-tabs {
+  margin-bottom: 30px;
+}
+
+.tool-INDEX .board-tabs {
+  margin-bottom: 0;
+}
+
+.tool-SHEET .board-tabs {
+  margin-bottom: 30px;
+}
+
+.tool-GOAL_CANVAS .board-tabs {
+  margin-bottom: 30px;
+}

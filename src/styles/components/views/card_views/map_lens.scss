@@ -1,0 +1,226 @@
+.map_lens {
+  position: relative;
+  // height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .map_background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    &.noLocation {
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      color: #fff;
+      font-size: 24px;
+      color: #000;
+    }
+  }
+
+  .cards_container {
+    position: relative;
+    margin: 52px 0 30px 9px;
+    // max-height: 50vh;
+    display: flex;
+    width: 400px;
+    overflow: auto;
+    z-index: 1;
+
+    .card_listings {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      // flex: 1;
+    }
+
+    .add-card-or-subtopic {
+      margin-left: 20px;
+      #domain-dropdown {
+        top: 0;
+      }
+    }
+
+    .header_section {
+      display: flex;
+      min-height: 50px;
+      justify-content: space-between;
+      padding: 10px;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+
+      &.isExpanded {
+        border-radius: 10px 10px 0 0;
+      }
+
+      .add_button {
+        border-radius: 100%;
+        padding: 5px;
+        background-color: #6fcf97;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .add-card-or-subtopic {
+        margin: 5px 10px auto 0;
+        .add-card-or-subtopic_button {
+          .plus-icon {
+            font-size: 40px;
+          }
+        }
+      }
+
+      .search_bar {
+        flex: 1;
+        display: flex;
+        position: relative;
+        border: 1.5px solid #ccc;
+        border-radius: 20px;
+        align-items: center;
+        padding: 0 10px;
+        .search_input {
+          border: 0;
+          background-color: transparent;
+        }
+      }
+
+      .expand_button {
+        margin: auto;
+        color: #c4c4c4;
+      }
+    }
+
+    .cards_section {
+      background-color: #fff;
+      overflow: auto;
+      // height: 550px;
+      position: relative;
+      flex: 1;
+
+      &.hasBorderRadius {
+        border-radius: 0 0 10px 10px;
+      }
+
+      .card_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-top: 1px solid #e4e4e4;
+
+        .flex_details {
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          flex: 1;
+
+          .icon-container {
+            margin-right: 10px;
+          }
+
+          .card_title {
+            cursor: pointer;
+            &:hover {
+              color: #f2ab13;
+            }
+          }
+        }
+
+        .noPointer {
+          cursor: initial;
+        }
+      }
+
+      .search_container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        // width: 100%;
+        position: relative;
+
+        .search_section {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          overflow: auto;
+          .section_header {
+            font-size: 18px;
+            padding-left: 5px;
+            border-bottom: 1px solid #eee;
+          }
+
+          .card_results {
+            // max-height: 245px;
+            flex: 1;
+            overflow: auto;
+          }
+
+          .location_picker {
+            position: relative;
+            overflow: auto;
+            > :first-child {
+              margin-top: 10px;
+            }
+            .search_results {
+              // max-height: 235px;
+              overflow: auto;
+              display: block;
+              width: 99%;
+
+              .search_result {
+                display: flex;
+                margin-bottom: 5px;
+                cursor: pointer;
+                justify-content: space-between;
+
+                & :first-child {
+                  display: flex;
+                }
+
+                &:hover {
+                  color: #f2ab13;
+                }
+
+                .result_name {
+                  font-weight: bold;
+                }
+
+                .result_add_button {
+                  & :first-child {
+                    border-radius: 100%;
+                    padding: 0px;
+                    background: #56ccf2;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .noResult {
+          padding-left: 5px;
+        }
+      }
+    }
+
+    .tip_section {
+      background-color: #fff;
+      border-radius: 0 0 10px 10px;
+      padding: 10px;
+      color: #8c8c8c;
+    }
+  }
+
+  .add_card_container {
+    position: absolute;
+    top: 10px;
+    left: 55px;
+  }
+}

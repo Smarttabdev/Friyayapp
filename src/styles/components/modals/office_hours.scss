@@ -1,0 +1,193 @@
+.office_hours {
+  height: 100%;
+  width: 100%;
+  padding: 40px 30px 30px 30px;
+  overflow-x: auto;
+
+  .office_hours-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 40px;
+
+    > :first-child {
+      font-weight: 600;
+      font-size: 30px;
+    }
+    > :last-child {
+      font-size: 16px;
+      color: #b4b4b4;
+      margin-left: 50px;
+      display: flex;
+      // width: 600px;
+      align-items: center;
+      // justify-content: space-between;
+
+      > div {
+        margin-right: 10px;
+      }
+
+      .office_hours-select-field {
+        width: 150px;
+      }
+      .timezone_field {
+        width: 80px;
+      }
+    }
+  }
+  .office_hours-close_btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .office_hours-user_segment {
+    display: flex;
+    height: 80px;
+    padding-left: 120px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+
+    .office_hours-user {
+      position: relative;
+      margin-right: 50px;
+      display: flex;
+      width: 140px;
+      &:hover {
+        .remove-user {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .office_hours-user_info {
+        max-width: 116px;
+
+        > :first-child {
+          font-size: 16px;
+        }
+        > :last-child {
+          height: 20px;
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          .user-timezone {
+            margin-left: 7px;
+            color: #c27bb4;
+          }
+          .user-online {
+            margin-left: 7px;
+            color: #75d19c;
+          }
+        }
+      }
+
+      .remove-user {
+        display: none;
+        //margin-left: 5px;
+      }
+    }
+
+    .select_people {
+      width: 140px;
+      font-size: 15px;
+    }
+  }
+
+  .office_hours-day_segment {
+    height: 50px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+
+    .day_segment-date {
+      cursor: pointer;
+    }
+
+    > :first-child {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .copy {
+      font-size: 14px;
+      color: #bbb;
+      margin-left: 10px;
+      cursor: pointer;
+      &:hover {
+        color: #246e95;
+      }
+    }
+
+    .react-datepicker__input-container {
+      font-weight: initial;
+    }
+    .react-datepicker__portal {
+      cursor: default;
+    }
+    .react-datepicker {
+      font-size: 1em;
+    }
+    .react-datepicker__header {
+      padding-top: 0.8em;
+    }
+    .react-datepicker__month {
+      margin: 0.4em 1em;
+    }
+    .react-datepicker__day-name,
+    .react-datepicker__day {
+      width: 1.9em;
+      line-height: 1.9em;
+      margin: 0.166em;
+    }
+    .react-datepicker__current-month {
+      font-size: 1em;
+    }
+    .react-datepicker__navigation {
+      top: 1em;
+      line-height: 1.7em;
+      border: 0.45em solid transparent;
+    }
+    .react-datepicker__navigation--previous {
+      border-right-color: #ccc;
+      left: 1em;
+    }
+    .react-datepicker__navigation--next {
+      border-left-color: #ccc;
+      right: 1em;
+    }
+  }
+
+  .office_hours-time_segment {
+    .hour_container {
+      height: 70px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+
+      .hour_container-hour {
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #898989;
+        font-size: 15px;
+      }
+
+      .hour_container-person {
+        margin-right: 50px;
+        width: 140px;
+        padding: 8px 0;
+
+        > div {
+          width: 100%;
+          height: 26px;
+          background-color: #ececec;
+          border-radius: 5px;
+        }
+
+        > :first-child {
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.tutorial-container {
+  background-color: #56ccf2;
+  position: fixed;
+  padding: 15px;
+  border-radius: 10px;
+  bottom: 2%;
+  left: 5%;
+  width: 258px;
+  color: white;
+  .tutorial-title {
+    cursor: pointer;
+  }
+}

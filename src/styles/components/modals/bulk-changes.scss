@@ -1,0 +1,37 @@
+.bulk-changes-container {
+  &.disabled * {
+    user-select: none !important;
+    pointer-events: none !important;
+    cursor: default !important;
+    opacity: 0.9 !important;
+  }
+}
+.bulk-changes-table {
+  width: 100%;
+  th {
+    font-weight: normal;
+    color: #b3b3b3;
+    padding: 15px;
+    &.board-type-col {
+      width: 210px;
+    }
+    &.cards-filter-col {
+      width: 65px;
+    }
+    &.card-type-col {
+      width: 165px;
+    }
+  }
+  td {
+    padding: 10px;
+    &.cards-filter-col {
+      white-space: nowrap;
+    }
+  }
+  tr {
+    border-top: 1px solid #dadada;
+    &:last-child {
+      border-bottom: 1px solid #dadada;
+    }
+  }
+}

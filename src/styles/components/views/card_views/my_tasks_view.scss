@@ -1,0 +1,50 @@
+.MyTasks {
+  padding: 30px 30px 30px;
+
+  .sheet-board .sheet-view__footer .sheet-view__grid .sheet-view__cell {
+    border: 0;
+    border-top: 1px solid #ffffff;
+  }
+
+  .resize-wrapper.rw--title {
+    width: 350px;
+  }
+
+  .sheet-board .sheet-view__cell.sheet-view__cell--title {
+    flex: 0 0 350px;
+  }
+
+  &-board {
+    background: #28b798;
+    border-radius: 15px;
+    color: #ffffff;
+    padding-top: 10px;
+    overflow: scroll;
+
+    .sheet-board .sheet-view__header .resize-wrapper {
+      border-left: 0 !important;
+      border-top: 0 !important;
+      color: #ffffff;
+      font-weight: 400;
+    }
+
+    .sheet-board .sheet-view__cell.sheet-view__cell--add {
+      border-right: 0 !important;
+    }
+
+    .sheet-board .sheet-view__content .sheet-view__grid .sheet-view__cell {
+      border-left: 0 !important;
+    }
+  }
+}
+
+.sheet-view__cell {
+  .sheet-view__cell-remove-btn {
+    display: none;
+  }
+  &:hover {
+    .sheet-view__cell-remove-btn {
+      display: block;
+    }
+  }
+}

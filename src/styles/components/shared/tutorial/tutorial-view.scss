@@ -1,0 +1,90 @@
+.tutorial-board-container {
+  background-color: #369acf;
+  position: fixed;
+  padding: 15px 5px;
+  border-radius: 25px;
+  height: 85vh;
+  overflow-x: scroll;
+  top: 8vh;
+  right: 40px;
+  width: 487px;
+  color: white;
+  z-index: 99;
+  .tutorial-image {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .tutorial-header {
+    padding: 10px 20px 0;
+    .close-dialog {
+      color: white;
+      font-size: 41px;
+      margin-top: -13px;
+    }
+    .tab-item {
+      font-weight: bold;
+      font-size: 21px;
+      white-space: nowrap;
+      margin: 20px 10px 20px 10px;
+      cursor: pointer;
+      padding-bottom: 3px;
+    }
+    .active-tab {
+      border-bottom: 4px solid white;
+    }
+  }
+
+  .tutorial-body {
+    list-style-type: none;
+    padding: 10px 30px;
+
+    hr {
+      margin: 30px 0;
+    }
+
+    .tutorial-title {
+      padding-top: 10px;
+      font-size: 24px;
+      line-height: 1.4;
+      &:first-child {
+        padding-top: 0;
+      }
+      font-weight: 800;
+    }
+
+    .tutorial__organizer-quiz {
+      margin: 30px 0;
+      font-size: 18px;
+      transition: color 300ms linear;
+
+      &__bold {
+        color: #56ccf2;
+        transition: color 300ms linear;
+        font-weight: 500;
+      }
+      &:hover {
+        color: #f2c94c;
+
+        .tutorial__organizer-quiz__bold {
+          color: #f2c94c;
+        }
+      }
+    }
+
+    /*     .body-item {
+      font-size: 16px;
+      &:first-child {
+        font-size: 18px;
+      }
+    } */
+  }
+  li::before {
+    font-size: 2.5em;
+  }
+
+  .tutorial-footer {
+    margin-top: 40px;
+    font-size: 14px;
+    padding: 10px 30px;
+  }
+}

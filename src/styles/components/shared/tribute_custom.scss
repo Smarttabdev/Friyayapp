@@ -1,0 +1,52 @@
+.tribute-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  min-width: 280px;
+  display: block;
+  z-index: $zindex-dropdown;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+  font-size: $font-size-base;
+  text-align: left;
+  background-color: $dropdown-bg;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  color: #555;
+
+  ul {
+    margin: 2px 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color: $dropdown-bg;
+
+    &:hover {
+      color: $dropdown-link-hover-color;
+      background-color: $dropdown-link-hover-bg;
+    }
+
+    span span {
+      font-weight: 400;
+    }
+
+    .no-match {
+      cursor: default;
+    }
+  }
+
+  .menu-highlighted {
+    font-weight: bold;
+  }
+
+  &__icon {
+    position: relative;
+    align-self: center;
+  }
+}

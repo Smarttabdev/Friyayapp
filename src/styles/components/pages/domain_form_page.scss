@@ -1,0 +1,145 @@
+#domain-dropdown {
+  li {
+    &:first-child {
+      padding-top: 3px;
+    }
+    &:last-child {
+      padding-bottom: 3px;
+    }
+  }
+  .domain-menu-item {
+    a {
+      margin-top: -5px;
+      margin-bottom: -5px;
+      font-size: 15px !important;
+      opacity: 0.8;
+      font-weight: 400 !important;
+      letter-spacing: 0.03em !important;
+    }
+  }
+}
+
+.domain-menu-item {
+  font-size: 20px;
+}
+
+.people-list {
+  margin-top: -1.5rem;
+  .nav-tabs {
+    z-index: 2;
+    border: 0 none;
+    padding: 1rem 0;
+    position: sticky;
+    top: -1.5rem;
+    background-color: white;
+    width: 100%;
+    & > li {
+      a {
+        color: #777;
+        border: 0 none;
+      }
+      &.active {
+        a {
+          color: #f2ab13;
+          border: 0 none;
+        }
+      }
+    }
+  }
+  .user-filter {
+    z-index: 2;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    position: sticky;
+    top: 4.3rem;
+    background: white;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f2f2f2;
+    border-top: 1px solid #f2f2f2;
+    .input-filter {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+    i {
+      color: #5bc0de;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      top: 0;
+    }
+    input {
+      border: 0 none;
+      flex: 1;
+      color: #777;
+      &:active,
+      &:focus {
+        outline: none;
+      }
+      &:-ms-input-placeholder,
+      &::-moz-placeholder,
+      &::-webkit-input-placeholder {
+        color: #eee;
+      }
+    }
+  }
+  .user-list {
+    list-style: none outside none;
+    padding-left: 0;
+    .navbar-right {
+      position: relative;
+      margin-right: 1rem;
+      margin-left: auto;
+    }
+    & > li {
+      padding-left: 1rem;
+      color: #777;
+      border-bottom: 1px solid #f2f2f2;
+      cursor: pointer;
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      &.blocked {
+        .avatar-link,
+        p {
+          opacity: 0.5;
+        }
+        i {
+          color: #5bc0de;
+          top: 0;
+          margin-left: 0.6rem;
+          margin-right: 0.6rem;
+        }
+      }
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+    button {
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.domain-submit__button {
+  display: inline-block;
+  position: relative;
+}
+
+.domain__spinner-icon {
+  position: absolute;
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

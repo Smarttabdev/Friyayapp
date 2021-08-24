@@ -1,0 +1,10 @@
+.alpha_filter {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  padding-right: 10px;
+
+  a {
+    color: currentColor !important;
+  }
+}

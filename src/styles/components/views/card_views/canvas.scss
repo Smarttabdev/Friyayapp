@@ -1,0 +1,332 @@
+.canvas-lens {
+  padding: 15px 0 15px 35px;
+  position: relative;
+}
+
+.block-selector {
+  margin-top: 12px;
+  margin-right: 35px;
+  padding: 22px 34px;
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-size: 18px;
+  color: #9b9b9b;
+}
+
+.block-list {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block-selector-item {
+  margin-bottom: 17px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .icon-container {
+    margin-right: 13px;
+  }
+}
+
+.show-selector-btn {
+  margin-top: 1px;
+  margin-left: -35px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.generic-block-container {
+  &:hover {
+    .canvas-block-container {
+      .block__remove-btn,
+      .card-details-header_buttons-container,
+      .drag-indicator {
+        visibility: visible;
+      }
+    }
+  }
+
+  .drag-indicator {
+    z-index: 5;
+  }
+}
+
+.canvas-goalDescription-block,
+.canvas-projectDescription-block,
+.canvas-sprintBar-block,
+.canvas-teamList-block {
+  padding: 0 !important;
+
+  .header {
+    min-height: 41px;
+    color: #fff;
+    gap: 11.38px;
+    padding: 0 16.38px;
+
+    &.goal-desc {
+      background: #56ccf2;
+    }
+
+    &.project-desc {
+      background: #eb5757;
+    }
+
+    &.team-list {
+      background: #9b51e0;
+    }
+
+    & > span {
+      font-weight: 700;
+      font-style: 18px;
+      line-height: 20.7px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+.canvas-goalDescription-block,
+.canvas-projectDescription-block {
+  & > .card-details {
+    padding: 19px 16.38px;
+  }
+}
+
+.canvas-sprintBar-block {
+  .SprintBar {
+    padding: 28px 18px;
+    margin: 0;
+  }
+}
+
+.canvas-teamList-block {
+  .team-avatar-list {
+    padding: 26px 29px;
+    gap: 57px;
+
+    .user-avatar_link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > .avatar-letter + span {
+        padding-left: 0;
+        margin-top: 13px;
+      }
+    }
+  }
+
+  .add-team-button {
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 50%;
+    border: solid 1px #dedede;
+    justify-content: center;
+    background: #fff;
+    cursor: pointer;
+    align-self: flex-start;
+
+    &:hover {
+      background: #f4f4f4;
+    }
+
+    &:active {
+      background: #dedede;
+    }
+  }
+}
+
+.canvas-block-container {
+  position: relative;
+  margin-bottom: 17px;
+  margin-right: 30px;
+}
+
+.canvas-block {
+  height: 100%;
+  margin-bottom: 4px;
+  padding: 29px 32px;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.block__more-btn {
+  position: absolute;
+  top: 12px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.block__remove-btn {
+  position: absolute;
+  top: 21px;
+  right: -22.5px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #999;
+}
+
+.block__remove-btn,
+.card-details-header_buttons-container,
+.drag-indicator {
+  visibility: hidden;
+}
+
+.block__more-menu {
+  margin: 0 !important;
+  padding: 4px 0 !important;
+  border-radius: 5px !important;
+  > li a {
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.canvas-cardList-block__tip-item {
+  height: 48px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.canvas-goalDescription-block,
+.canvas-projectDescription-block {
+  .card-details {
+    .card-details-header {
+      .card-details-header_buttons-container {
+        .dropdown.more_vert {
+          .card-option-action-dropdown {
+            color: #fff;
+            margin-top: 3.5px;
+
+            &:hover {
+              color: #f2c94c;
+            }
+          }
+        }
+
+        .canvas-save-button {
+          color: #fff;
+
+          &:hover {
+            color: #f2c94c;
+          }
+        }
+      }
+    }
+  }
+}
+
+.canvas-paragraph-block {
+  .card-details {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    .card-details-header {
+      z-index: 2;
+
+      .card-details-header_buttons-container {
+        flex-direction: column;
+        flex-flow: column-reverse;
+        height: calc(100% - 35px);
+        position: absolute;
+        justify-content: space-between;
+        right: -37px;
+        top: 35px;
+
+        & > * {
+          margin: 10px 0;
+        }
+
+        .dropdown.more_vert {
+          & > div:first-of-type {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.canvas-card-block {
+  .card-details {
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+.canvas-board-block {
+  .plan_lenses {
+    padding: 0;
+    overflow: auto;
+    .team-plan-board {
+      padding: 0;
+      .team_plan-boxes {
+        padding: 0;
+        .team_plan-user_box {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.canvas-cardList-block,
+.canvas-chatList-block {
+  .sheet-view__add-row {
+    height: 54px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    input {
+      margin-left: 57px;
+      border: none;
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.canvas-chatList-block {
+  .sheet-view__add-row {
+    input {
+      margin-left: 38px;
+    }
+  }
+}
+
+.canvas-chatList-block__chat-item__td {
+  width: 266px;
+  height: 48px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.canvas-goalList-block,
+.canvas-projectList-block {
+  .sheet-board-container {
+    overflow: auto;
+  }
+  .sheet-view__header {
+    .resize-wrapper {
+      color: #515050 !important;
+      font-weight: bold !important;
+    }
+  }
+}
+
+.canvas-lens {
+  .is-dragging > * > .canvas-block-container {
+    opacity: 0.3;
+  }
+}

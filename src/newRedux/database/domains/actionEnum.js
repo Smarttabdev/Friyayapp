@@ -1,0 +1,16 @@
+export default {
+  add: 'DB_DOMAINS__ADD_DOMAINS',
+  delete: 'DB_DOMAINS__DELETE_DOMAIN',
+  change: 'DB_DOMAINS__CHANGE_DOMAIN',
+  replace: 'DB_DOMAINS__REPLACE_DOMAIN',
+  update: 'DB_DOMAINS__UPDATE_DOMAIN',
+  addDesign: 'DB_DOMAINS__ADD_DOMAINS_DESIGN',
+  updateDesign: 'DB_DOMAINS__UPDATE_DOMAINS_DESIGN',
+  deleteDesign: 'DB_DOMAINS__DELETE_DOMAINS_DESIGN',
+  activateDesign: 'DB_DOMAINS__ACTIVATE_DOMAINS_DESIGN',
+  setDefaultDesign: 'DB_DOMAINS__SET_DEFAULT_DESIGN',
+  updateDomainUiSettings: 'DB_DOMAINS__UPDATE_UI_SETTINGS',
+  updateDomainFilterSettings: 'DB_DOMAINS_UPDATE_FILTER_SETTINGS',
+  setCustomDomainLens: 'DB_DOMAINS__SET_CUSTOM_LENS',
+  updateOrderSettings: 'DB_DOMAINS__UPDATE_ORDER_SETTINGS'
+};

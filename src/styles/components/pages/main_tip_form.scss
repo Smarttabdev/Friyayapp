@@ -1,0 +1,110 @@
+#main-tip-form,
+#main-item-form {
+  input#tip_expiration_date {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color ease-in-out 0.15s;
+    &:focus {
+      border-color: $brand-primary;
+    }
+  }
+  #tip-expiration-label {
+    float: left;
+    font-weight: 300;
+    color: $gray-light;
+    margin-right: 10px;
+    padding-top: 7px;
+  }
+}
+
+#main-tip-form {
+  .tip_tab_content_footer {
+    color: #292b2d;
+    margin: 15px;
+    .date-input {
+      width: 100%;
+      display: flex;
+
+      .SingleDatePicker {
+        // margin-left: auto;
+        width: 100%;
+      }
+
+      .SingleDatePickerInput {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+      }
+
+      .DateInput_input {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .SingleDatePickerInput_calendarIcon {
+        float: right;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  .menuAddCard {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 50px;
+    right: 16px;
+    left: initial;
+    width: 350px;
+    .dropdown-menu-title {
+      color: #777;
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+    .add-card-input-wrapper form {
+      margin-left: 0;
+    }
+    .add-card-input-wrapper form input {
+      width: 100%;
+    }
+  }
+}
+
+.add-topic-main {
+  margin: 10px;
+  color: #369acf;
+}
+
+.add-topic-btn {
+  border: 0px;
+  background: transparent;
+  font-size: 15px;
+  margin: 10px auto;
+}
+
+.topics-menu-selectize .selectize-input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 53px;
+  max-height: 85px;
+  overflow-y: auto;
+  vertical-align: middle;
+}
+
+.selectize-input:focus-within {
+  border: 1px solid #ccc;
+}
+
+.tooltip > .tooltip-inner {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  font-size: 15px;
+}
+
+.tooltip.top > .tooltip-arrow {
+  border-top: 5px solid #000;
+}

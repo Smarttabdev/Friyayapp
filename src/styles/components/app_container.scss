@@ -1,0 +1,44 @@
+.tiphive-outer-container {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 0 0;
+  flex-flow: column nowrap;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1px;
+}
+
+.tiphive-inner-container {
+  flex: 1 0 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #2e3037;
+}
+
+.tiphive-content {
+  flex: 1 0 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin-right: 10px;
+  border-top-right-radius: 20px;
+}
+
+.tiphive-content__main {
+  flex: 1 0 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.tiphive-window {
+  display: flex;
+  background-color: $workspace-background;
+  color: rgba(255, 255, 255, 0.7);
+}

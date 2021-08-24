@@ -1,0 +1,105 @@
+.situation_room-tool {
+  padding: 50px;
+  padding-left: 35px;
+  display: flex;
+  background-color: transparent;
+
+  .situation_room-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 320px));
+    grid-gap: 50px 40px;
+    background-color: transparent;
+    flex: 80%;
+
+    .situation_room-topicSegment {
+      height: 350px;
+      border: 1px solid;
+      border-radius: 10px;
+      padding: 20px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+      background-color: transparent;
+
+      &.add_view {
+        display: flex;
+        background-color: #fafafa;
+        .situation_room-add_view {
+          color: rgb(111, 207, 151);
+          display: flex;
+          align-items: center;
+          margin: 0 auto;
+          font-size: 24px;
+          .add-subtopic-input {
+            width: 150px;
+            padding: 0;
+            margin-left: 5px;
+            color: initial;
+            font-size: 16px;
+          }
+        }
+      }
+
+      > :first-child {
+        margin-bottom: 10px;
+      }
+
+      .topicSegment_header {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .live_pulse {
+          right: 0;
+          position: absolute;
+        }
+      }
+
+      .wiki-card_title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .situation_room-users {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 80px));
+
+        .situation_room-user_letter {
+          width: 80px;
+          height: 80px;
+          display: flex;
+          align-items: center;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: 16px;
+          background-color: #56ccf2;
+
+          > :first-child {
+            margin: 0 auto;
+          }
+        }
+        .situation_room-user_image {
+          border: 2px solid #56ccf2;
+          border-radius: 10px;
+        }
+      }
+
+      .situation_room-shared_with {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+
+        > :last-child {
+          height: 25px;
+          display: flex;
+          align-items: center;
+          margin-left: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

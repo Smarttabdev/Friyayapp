@@ -1,0 +1,132 @@
+.wsv {
+  &.planning-grid {
+    overflow: auto;
+  }
+
+  .planning-grid__header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .planning-grid__cards {
+    // border-top: 1px solid rgba(117, 117, 117, 0.15);
+    flex-direction: row;
+    overflow-x: visible;
+    overflow-y: auto;
+  }
+
+  .planning-grid__cell {
+    min-width: 120px;
+  }
+
+  .calendar-view__cell--header {
+    min-width: 120px !important;
+  }
+
+  .hour-column {
+    min-width: 50px;
+    width: 50px;
+    height: 1440px;
+  }
+  .hour-column-cell {
+    height: 60px;
+    position: relative;
+    p {
+      position: absolute;
+      right: 5px;
+      bottom: -10px;
+      margin: 0;
+    }
+  }
+  .day-column {
+    min-width: 120px;
+    height: 1440px;
+    border-left: 1px solid rgba(117, 117, 117, 0.15);
+    flex-grow: 1;
+    position: relative;
+  }
+  .day-column-cell {
+    height: 60px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.15);
+  }
+
+  .day-column__trigger {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .day-column-dropdown {
+    position: relative;
+
+    &__header {
+      margin: 5px 0;
+      font-size: 16px;
+      font-weight: 800;
+    }
+  }
+
+  .popup-card {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    align-items: 'center';
+    cursor: pointer;
+
+    &:hover {
+      background-color: #edeef0;
+    }
+
+    &__title {
+      align-self: center;
+      font-size: '14px';
+      margin-left: '10px';
+    }
+  }
+}
+
+.wsv .logtime-card.past .content {
+  background: #26c6da;
+}
+.wsv .logtime-card.future .content {
+  background: #bdbdbd;
+}
+.wsv .logtime-card.present .content {
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  color: #000;
+}
+.wsv .logtime-card .content,
+.custom-drag-preview .logtime-card .content {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.wsv .logtime-card.rightmost .content {
+  margin-right: 5px;
+}
+.wsv .logtime-card {
+  .resizer {
+    height: 5px;
+    cursor: row-resize;
+  }
+  .card-body {
+    padding: 0 5px;
+    flex: 1;
+    color: #252828;
+  }
+}
+.custom-drag-preview .logtime-card {
+  border-radius: 5px;
+}
+
+.wsv .planning-grid__drop-zone {
+  padding: 0;
+  margin: 5px;
+}

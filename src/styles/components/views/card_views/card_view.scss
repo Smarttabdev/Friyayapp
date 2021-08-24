@@ -1,0 +1,641 @@
+.card-board {
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  flex: 1 0 0;
+  flex-flow: row nowrap;
+  min-width: 0;
+  // background-color: $colour-grey-light-1;
+
+  .board-top-bar {
+    position: absolute;
+    right: 40px;
+    padding-top: 12px;
+    width: auto;
+  }
+}
+
+.card-board-list {
+  width: 0;
+  margin: 15px 15px 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  // background: $colour-grey-light-1;
+
+  &.presented {
+    width: 350px;
+    margin-top: 3px;
+    height: calc(100vh - 150px);
+  }
+
+  .card-card {
+    .card-card__content {
+      padding-left: 12px;
+
+      .card-card_title {
+        flex-grow: 1;
+        .activity-indicator {
+          margin-top: 1.3px;
+        }
+      }
+
+      .nest-card-zone {
+        width: 1.2rem;
+      }
+
+      .material-icons {
+        padding-top: 2px;
+      }
+    }
+  }
+}
+
+.card-board-main-section {
+  display: flex;
+  flex: 1 1 0;
+  flex-flow: column nowrap;
+  max-width: 100%;
+  min-width: 0;
+  overflow: auto;
+  margin-top: 19px;
+  margin-left: 0px;
+  border-radius: 4px;
+  margin-top: 10px;
+  height: calc(100vh - 160px);
+  .card-details {
+    margin-right: 30px;
+    // margin-bottom: 30px;
+
+    .text-editor-wrapper .fr-toolbar {
+      position: sticky;
+      top: -37px;
+    }
+  }
+}
+
+.card-details {
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  transition: margin 0.3s ease;
+  padding: 30px;
+
+  .btn {
+    border-radius: 2px;
+
+    &.btn-default {
+      border-color: #369acf;
+      min-width: 120px;
+    }
+  }
+}
+
+.card-details-header {
+  align-items: center;
+  color: $colour-grey-1;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: auto;
+}
+
+.card-details-header_title-container {
+  align-items: center;
+  display: flex;
+  color: silver;
+}
+
+.card-details-header_buttons-container {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  padding: 10px;
+  padding-bottom: 0;
+  top: 0;
+  right: 0;
+  justify-content: flex-end;
+  &.dots-layer-container {
+    .dots-layer {
+      width: 100%;
+    }
+  }
+}
+
+/* Why this weird selector?
+  Because the package we using for split screen doesn't give className to secondary pane
+  and also doesn't provide prop to pass one.
+  But it does assign assign .layout-pane-primary to primary pane and .layout-pane to both panes
+  So ¯\_(ツ)_/¯
+*/
+
+.layout-pane:not(.layout-pane-primary) {
+  .card-details-header_buttons-container {
+    &.dots-layer-container {
+      top: -14px;
+    }
+    .dots-layer {
+      width: 70px;
+    }
+  }
+
+  .card-details {
+    padding: 24px 16px;
+    padding-top: 0px;
+    .card-details-footer {
+      .card-details-header_title-container {
+        flex-basis: 250px;
+        justify-content: space-around;
+      }
+      .card-details-footer__gutter {
+        flex-grow: 5;
+      }
+      .card-details-footer__actions {
+        flex-grow: 1;
+        flex-basis: auto;
+        justify-content: space-around;
+        padding-top: 2px;
+        &.flexEnd {
+          justify-content: flex-end;
+          > * {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      // styles for split screen
+      // THIS IS QUICK FIX AND SHOULD BE REMOVED
+      // Todo: @abdullah
+      &.hide-for-split-screen-board {
+        display: none;
+      }
+
+      &.hide-for-full-screen-board {
+        display: flex;
+        color: #555;
+      }
+    }
+  }
+  .card-details-editor,
+  .card-details-preview {
+    margin-top: 10px;
+  }
+
+  .card_details_preview_title_icon {
+    margin-top: 16px;
+  }
+
+  .card-details-editor_title-input,
+  .card-details-preview_title {
+    font-size: 28px;
+  }
+}
+
+.card-details-preview-parent {
+  display: flex;
+  flex: 1 0 auto;
+  .card_details_preview_title_icon {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+  }
+}
+
+.card-details-preview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #292b2d;
+
+  .card-container__card-panel-toggle {
+    color: #757575;
+  }
+}
+
+.card_details_foot {
+  color: #292b2d;
+  &.isPreview {
+    .card-details-footer {
+      padding-left: 6px;
+      .comments-list_title {
+        margin-left: -14px;
+      }
+    }
+  }
+  &.isEdit {
+    .card-details-footer {
+      padding-left: 6px;
+      .comments-list_title {
+        margin-left: -7px;
+      }
+    }
+  }
+  .date-input {
+    width: 100%;
+    display: flex;
+
+    .SingleDatePicker {
+      // margin-left: auto;
+      width: 100%;
+    }
+
+    .SingleDatePickerInput {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #ebebeb;
+      width: 100%;
+    }
+
+    .DateInput_input {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .SingleDatePickerInput_calendarIcon {
+      float: right;
+      padding-right: 5px;
+    }
+  }
+
+  .addAssignee {
+    .css-1fkqp2x-control.react-select-dropdown__control {
+      border-bottom-color: #ebebeb;
+    }
+  }
+
+  .comment-box {
+    .fr-toolbar {
+      border-radius: 20px 20px 0 0 !important;
+    }
+    .fr-wrapper {
+      border-radius: 0 0 20px 20px !important;
+      border-top: 0px !important;
+    }
+    .fr-toolbar .fr-command.fr-btn svg.fr-svg {
+      height: 16px;
+      margin: 2px;
+    }
+  }
+}
+
+.card-details-preview_content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  td {
+    //width: auto !important;  If width is auto, user set column width is overridden
+    border: solid 1px #dddddd;
+    min-width: 10px;
+  }
+
+  .item-text {
+    &.fr-view {
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.card-details-preview_title {
+  color: #292b2d;
+  font-weight: 900;
+  font-size: 30px;
+  margin: 5px 0 15px 0;
+  display: flex;
+  align-items: center;
+  // width: calc(100% - 150px);
+}
+
+del.differ {
+  color: #c33b3b;
+}
+
+.card-details-preview_body {
+  color: $colour-grey-dark-2;
+  font-size: 15px;
+}
+
+.card-details-preview_placeholder-text {
+  margin: 15px 0px;
+  display: inline-block;
+}
+
+.card-details-editor-parent {
+  display: flex;
+  // height: calc(100% - 50px);
+}
+
+.card-details-editor {
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  width: 100%;
+
+  .card_details_editor_title_icon {
+    display: flex;
+    align-items: center;
+    .sheet-view__cell--title-type-dropdown {
+      display: flex;
+      align-items: center;
+      padding: 6px 2px 8px 2px;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #dfdfdf;
+      }
+      &:hover > span {
+        color: #f2ab13; //orange color
+      }
+
+      & > span {
+        margin-left: 5px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .titleContainer {
+    border-bottom: 1.5px solid #7dd0ea;
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+
+    .hideToolbar {
+      color: #7dd0ea;
+      cursor: pointer;
+    }
+  }
+
+  .item-text-editor-container {
+    #editor {
+      .fr-element.fr-view {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .fr-wrapper {
+    box-shadow: none !important;
+  }
+  .fr-toolbar {
+    box-shadow: none !important;
+  }
+
+  .item-update-form {
+    .fr-toolbar .fr-command.fr-btn svg.fr-svg {
+      height: 16px;
+      margin: 2px;
+    }
+    .text-editor-wrapper {
+      .fr-wrapper {
+        h1,
+        h2,
+        h3,
+        h4 {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.card-details-editor_title-input {
+  border: none;
+  color: $colour-grey-dark-2;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+  outline: none;
+}
+
+.card-card {
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  transition: 0.33s ease-in-out;
+
+  .card-title {
+    color: #292b2d;
+    span.line-clamp {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &.is-selected,
+  &:hover {
+    background-color: #ddd;
+  }
+
+  &:hover {
+    .card-card__nested-cards-add {
+      display: initial;
+    }
+    .card-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  &.show-caret .card-card__nested-cards-caret {
+    visibility: visible;
+  }
+
+  .nest-card-zone {
+    &.highlight-drop-zone.is-over {
+      border: dotted 1px orange;
+    }
+  }
+}
+
+.card-card__content {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  padding: 0;
+  width: 100%;
+}
+
+.card-card__nested-cards-add {
+  display: none;
+  margin-left: 5px;
+}
+
+.card-card__nested-cards-caret {
+  visibility: hidden;
+  width: 24px;
+}
+
+.card-card__nested-cards {
+  padding: 0 15px 8px 54px;
+}
+
+.card-card__nested-card {
+  font-weight: normal;
+}
+
+.card-details-footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  color: #333;
+
+  // styles for full screen
+  // THIS IS QUICK FIX AND SHOULD BE REMOVED
+  // Todo: @abdullah
+  &.hide-for-split-screen-board {
+    display: flex;
+  }
+
+  &.hide-for-full-screen-board {
+    display: none;
+  }
+
+  .dots-container {
+    // width: 42px;
+    padding: 0px 10px;
+    border-radius: 17px;
+    height: 33px;
+    display: block;
+    background-color: #f1f1f1;
+    cursor: pointer;
+
+    .dots {
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+
+      &:nth-child(1) {
+        display: inline-block;
+        background: #f2994a;
+        margin: 13px 2px 12px 0px;
+      }
+      &:nth-child(2) {
+        display: inline-block;
+        background: #56ccf2;
+        margin: 13px 0px 12px 0px;
+      }
+      &:nth-child(3) {
+        display: inline-block;
+        background: #9b51e0;
+        margin: 13px 0px 12px 2px;
+      }
+    }
+  }
+}
+
+.card-nested-cards {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px 40px 15px 20px;
+  background-color: #fafafa;
+  border: 1px solid #f2f2f2;
+  border-left: none;
+  border-right: none;
+
+  .card-nested-cards__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    max-width: 400px;
+    height: 26px;
+
+    &:hover {
+      background-color: #f0f0f0;
+
+      .card-nested-cards__card-options {
+        visibility: visible;
+      }
+    }
+  }
+
+  .card-nested-cards__card-options {
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+  }
+
+  .card-nested-cards__dropdown {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+  }
+}
+
+.custom-drag-preview {
+  .card-card {
+    width: 250px;
+  }
+}
+
+.left-section-icon {
+  position: fixed;
+  left: 4px;
+  width: 20px;
+  border-radius: 0 50% 50% 0;
+  height: 20px;
+  transition: all 0.3s;
+  z-index: $z-index-6;
+  &-container {
+    position: absolute;
+    left: -3px;
+    top: -2px;
+  }
+  .material-icons {
+    font-size: 10px;
+  }
+}
+
+.addAssignee {
+  .css-l172q6,
+  .css-kj6f9i-menu {
+    color: #555;
+  }
+
+  .location_picker {
+    position: relative;
+    .search_input {
+      border: none;
+      border-bottom: 1px solid #eee;
+      padding-left: 1px;
+      margin: 10px 0;
+    }
+    .search_results {
+      top: -160px;
+      height: 150px;
+      overflow: auto;
+      display: block;
+      width: 99%;
+
+      .search_result {
+        display: flex;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        &:hover {
+          color: #f2ab13;
+        }
+
+        .result_name {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

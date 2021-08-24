@@ -1,0 +1,189 @@
+.day_lenses {
+  display: flex;
+  overflow-y: hidden;
+  height: 100%;
+  color: #555555;
+  .team_day_lens {
+    padding: 0 35px;
+    flex: 1;
+    .boxes {
+      display: flex;
+      overflow-x: auto;
+      height: 100%;
+      color: #555555;
+      margin-top: 20px;
+      .user_box {
+        padding: 20px;
+        background-color: #ededed;
+        border-radius: 15px;
+        min-width: 600px;
+        overflow-y: auto;
+        flex: 0 0 auto;
+        margin-right: 10px;
+        display: flex;
+        justify-content: space-between;
+        .activity_section {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          .user {
+            position: relative;
+            margin-bottom: 10px;
+            .user_info {
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+              &:hover {
+                .remove {
+                  display: block;
+                }
+              }
+              & + .dropdown-menu {
+                width: auto;
+                min-width: 250px;
+              }
+              .remove {
+                display: none;
+              }
+            }
+            .dropdown-menu {
+              display: block;
+            }
+          }
+        }
+        .results_section {
+          flex: 1.5;
+          .header {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .add_user {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        background-color: #ededed;
+        border-radius: 15px;
+        justify-content: center;
+        position: relative;
+        flex: 0 0 auto;
+        .dropdown-menu {
+          display: block;
+          width: auto;
+          min-width: 250px;
+        }
+      }
+    }
+  }
+
+  .my_day_lens {
+    padding: 0 35px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    .header {
+      margin-bottom: 10px;
+    }
+    .sections {
+      background-color: #ededed;
+      padding: 20px 20px 0 20px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      margin-right: 20px;
+    }
+    .activity_section {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 280px;
+    }
+
+    .progress_section {
+      flex: 1 0 320px;
+    }
+
+    .attention_section {
+      margin-right: 0;
+      flex: 1 0 320px;
+    }
+  }
+
+  .header {
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+
+  .activity_box {
+    display: flex;
+    flex: 1;
+    .dots {
+      width: 30px;
+      background-color: #fff;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      padding: 0 5px;
+      margin-right: 10px;
+      .dot {
+        width: 20px;
+        height: 20px;
+        background-color: #56ccf2;
+        border-radius: 20px;
+        margin: 16px 0;
+      }
+    }
+    .activities {
+      // width: 170px;
+      .activity_info {
+        display: flex;
+        // justify-content: space-between;
+        margin: 16px 0;
+        border-radius: 20px;
+        height: 20px;
+        .activity_time {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .result_box {
+    // width: 280px;
+    // height: 50px;
+    // background-color: #6fcf97;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    color: #fff;
+
+    .count {
+      font-size: 34px;
+      margin-right: 10px;
+    }
+
+    .result_box__content {
+      display: flex;
+      align-items: center;
+    }
+
+    .result_box__cards-list {
+      height: 200px;
+      background-color: white;
+      border-radius: 15px;
+      margin: 5px -15px 5px;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      padding: 6px 0px;
+      cursor: default;
+    }
+
+    .result_box__cards-list-item {
+      padding: 6px 10px 6px 15px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

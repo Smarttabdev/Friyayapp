@@ -1,0 +1,57 @@
+$hover-delay: 1s;
+
+.left-action-bar-container {
+  display: flex;
+  position: fixed;
+  left: -10px;
+  width: 20px;
+  z-index: $z-index-5;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  height: 100%;
+  background-color: inherit;
+  border-right: 10px solid transparent;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: border-color 0s 0s;
+
+  &:hover {
+    border-right-color: #464646;
+    z-index: $z-index-7;
+    > .left-action-bar-menu {
+      left: 0;
+    }
+  }
+
+  &:not(:hover) {
+    > .left-action-bar-menu {
+      transition: left 0s 0s;
+    }
+  }
+
+  > .icon-container {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    width: 10px;
+    height: 50px;
+    border-radius: 5px;
+    background: #ddd;
+    top: 50%;
+    > .material-icons {
+      font-size: 10px;
+    }
+  }
+  > .left-action-bar-menu {
+    position: fixed;
+    left: -100%;
+    background-color: inherit;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: calc(100% - 20px);
+    bottom: 10px;
+    z-index: 2052;
+    transition: left 0s $hover-delay;
+  }
+}

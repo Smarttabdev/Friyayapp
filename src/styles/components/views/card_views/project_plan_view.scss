@@ -1,0 +1,18 @@
+.project-plan-container,
+.goal-plan-container {
+  height: 100%;
+
+  .sheet-view__card-title {
+    .nest-card-zone {
+      margin-right: -5px;
+    }
+  }
+
+  .sheet-view__footer {
+    .sheet-view__cell {
+      .input-plus-icon {
+        margin-right: -3px;
+      }
+    }
+  }
+}

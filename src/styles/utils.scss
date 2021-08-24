@@ -1,0 +1,277 @@
+.cursor-default {
+  cursor: default;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.ignore-click {
+  pointer-events: none;
+}
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.text-light-muted {
+  color: #999;
+
+  &:hover {
+    color: $gray-light;
+  }
+}
+
+.padding0 {
+  padding: 0 !important;
+}
+.margin50 {
+  margin: 0 50px;
+}
+.marginTop20 {
+  margin: 20px 0 0 0;
+}
+.marginTop30 {
+  margin: 30px 0 0 0;
+}
+.width95 {
+  width: 95%;
+  margin: 0 auto;
+}
+.yellowShade {
+  color: #ffc107;
+}
+.greenShade {
+  color: #4dbd74;
+}
+.pinkShade {
+  color: #e83e8c;
+}
+.blueShade {
+  color: #63c2de;
+}
+.purpleShade {
+  color: #6f42c1;
+}
+.noBorder {
+  border: none !important;
+}
+.flexCenter {
+  display: flex;
+  align-items: center;
+}
+.flexSpaceInBetween {
+  justify-content: space-between !important;
+}
+
+//Generic style for all dropdown menus
+.dropdown-menu {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  z-index: $z-index-max;
+}
+
+.dropdown-description {
+  font-size: larger;
+}
+
+.dropdown-header + .dropdown-header {
+  padding-top: 15px !important;
+}
+
+.invite-form-dropdown-menu {
+  padding: 0;
+}
+
+.__floater {
+  z-index: 1000 !important;
+}
+
+.action-description {
+  color: #888;
+  font-size: smaller;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.pe-none {
+  pointer-events: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-93 {
+  color: #939393;
+}
+
+.color-b8 {
+  color: #b8b8b8;
+}
+
+.color-c8 {
+  color: #c8c8c8;
+}
+
+.bg-purple {
+  background-color: #9b51e0;
+}
+
+.bg-green {
+  background-color: #6fcf97;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.font-size-25 {
+  font-size: 25px;
+}
+
+.static {
+  position: static;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.h40 {
+  height: 40px;
+}
+
+.max-h-unset {
+  max-height: unset;
+}
+
+.ph10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ph12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.ph14 {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.pv5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.pv8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.pv10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.br2 {
+  border-radius: 2px;
+}
+
+.br6 {
+  border-radius: 6px;
+}
+
+.br12 {
+  border-radius: 12px;
+}
+
+.border1 {
+  border: 1px solid #cdcdcd;
+}
+
+.border-black {
+  border-color: black;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.box-shadow-none {
+  box-shadow: none;
+}

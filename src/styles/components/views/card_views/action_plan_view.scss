@@ -1,0 +1,61 @@
+.ActionPlan {
+  padding: 30px 30px 30px 45px;
+
+  .sheet-board .sheet-view__footer .sheet-view__grid .sheet-view__cell {
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+
+  .resize-wrapper.rw--title {
+    width: 350px;
+  }
+
+  .sheet-board .sheet-view__cell.sheet-view__cell--title {
+    flex: 0 0 350px;
+  }
+
+  &-board {
+    background: #ffffff;
+    border-radius: 15px;
+    color: #555;
+    padding-top: 10px;
+    overflow: auto;
+
+    .sheet-board .sheet-view__header .resize-wrapper {
+      border-left: 0 !important;
+      border-top: 0 !important;
+      color: #b8b8b8;
+      font-weight: 400;
+    }
+
+    .sheet-board .sheet-view__cell.sheet-view__cell--add {
+      border-right: 0 !important;
+    }
+
+    .sheet-board .sheet-view__content .sheet-view__grid .sheet-view__cell {
+      border-left: 0 !important;
+    }
+  }
+
+  .sheet-board .sheet-view__content {
+    .sheet-view__card,
+    .project-plan-board {
+      border-bottom: 0;
+
+      .sheet-view__cell {
+        border-bottom: 1px solid #eeeeee;
+      }
+    }
+  }
+}
+
+.sheet-view__cell {
+  .sheet-view__cell-remove-btn {
+    display: none;
+  }
+  &:hover {
+    .sheet-view__cell-remove-btn {
+      display: block;
+    }
+  }
+}

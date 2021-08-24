@@ -1,0 +1,8 @@
+.modal-inner-container {
+  &.disabled * {
+    user-select: none !important;
+    pointer-events: none !important;
+    cursor: default !important;
+    opacity: 0.9 !important;
+  }
+}

@@ -1,0 +1,96 @@
+.google-drive {
+  padding: 10px 10px 10px 45px;
+
+  .dropdown-menu {
+    padding: 10px;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px #c8c8c8;
+    border-radius: 14px;
+    padding: 0px 5px 0px 13px;
+    margin: 0px 10px;
+    width: 400px;
+    > .search-input {
+      border: none;
+      flex-grow: 1;
+      background-color: #00000000;
+
+      &:focus,
+      :hover,
+      :active {
+        outline: none;
+      }
+    }
+  }
+  .icons-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .folder {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 200px;
+      height: 47px;
+      padding: 10px;
+      margin: 10px 20px 10px 0px;
+      border: solid 1px #c8c8c8;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+
+      > .folder-text {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .file {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      height: 250px;
+      padding: 10px;
+      margin: 10px 20px 10px 0px;
+      border: solid 1px #c8c8c8;
+      border-radius: 8px;
+      cursor: pointer;
+
+      > .img-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        margin-bottom: 10px;
+
+        > img {
+          max-height: 200px;
+          max-width: 220px;
+          min-width: 80px;
+        }
+      }
+
+      > .file-title {
+        display: flex;
+        flex-direction: row;
+
+        > .file-text {
+          margin-left: 10px;
+          font-weight: 500;
+          height: 19px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}

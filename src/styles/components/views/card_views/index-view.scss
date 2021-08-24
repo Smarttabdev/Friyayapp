@@ -1,0 +1,545 @@
+.index-board {
+  display: flex;
+  background-color: transparent;
+  padding: 50px;
+
+  .add-card-card-container {
+    .add-card-card_section {
+      & > button.btn {
+        color: #a2a2a2;
+        font-size: 14px;
+
+        &:hover {
+          color: #f2ab13;
+        }
+      }
+    }
+  }
+
+  &.project-tool {
+    padding-left: 35px;
+
+    .project-lens__topicSegment {
+      height: 300px;
+      border: 1px solid;
+      border-radius: 10px;
+      padding: 10px 5px;
+      border-color: #ebebeb;
+      // overflow-y: auto;
+      // overflow-x: hidden;
+      &.add_view {
+        display: flex;
+        background-color: #fafafa;
+        .project-add_view {
+          color: rgb(111, 207, 151);
+          display: flex;
+          align-items: center;
+          margin: 0 auto;
+          font-size: 24px;
+          .add-subtopic-input {
+            width: 150px;
+            padding: 0;
+            margin-left: 5px;
+            color: initial;
+            font-size: 16px;
+          }
+        }
+      }
+      .wiki-card {
+        .noWidth {
+          width: 0;
+          margin-right: 20px;
+
+          i {
+            font-size: 14px;
+          }
+        }
+
+        .cardIcon-mr {
+          margin-right: 5px;
+        }
+      }
+
+      .item-wrapper {
+        // height: 100%;
+        max-height: 237px;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      .index-view__topic-title-wrapper {
+        .indexview-topic-segment_topic-icon {
+          margin-top: 5px;
+          // color: #fff !important;
+        }
+
+        .card-title.wiki-card_title {
+          top: 0;
+        }
+      }
+    }
+
+    &.project-board {
+      .project-lens__topicSegment {
+        .wiki-list_topic-dropzone {
+          .add-card-card-container {
+            .add-card-card_section {
+              margin: 0 0 0 -7px;
+
+              .add-card-card_content {
+                width: 100%;
+                justify-content: flex-start;
+
+                & > a {
+                  padding-top: 0;
+                }
+              }
+            }
+          }
+
+          .add-board-button {
+            margin-left: 8px;
+            color: #a2a2a2;
+            cursor: pointer;
+
+            &:hover {
+              color: #f2ab13;
+            }
+          }
+
+          .add-subtopic-card_content {
+            width: 100% !important;
+
+            .add-sub-topic-input-wrapper {
+              margin: 0 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.task-boards {
+    padding-top: 35px;
+
+    .notch {
+      width: 70px;
+      height: 35px;
+      border-radius: 140px 140px 0 0;
+      background: #fafafa;
+      margin: auto;
+      margin-bottom: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > div {
+        width: 13px;
+        height: 13px;
+        background: #fff;
+        border-radius: 50%;
+      }
+    }
+
+    .project-lens__topicSegment {
+      height: 496px;
+      position: relative;
+      background: #fff;
+      // overflow: hidden;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0.5px;
+        border-style: solid;
+        border-width: 35px 40px 0 0;
+        border-color: #ededed #fff;
+        transition: all ease 0.5s;
+      }
+
+      .add-subtopic-card_content {
+        margin: auto;
+      }
+
+      .item-wrapper {
+        max-height: 437px;
+      }
+    }
+
+    .index-grid-layout {
+      grid-template-columns: repeat(auto-fill, 394px);
+
+      .project-lens__topicSegment {
+        padding: 0;
+        border: 0;
+        box-shadow: 0px 3px 4px -1px rgba(161, 161, 161, 0.75);
+
+        & > .index-view__topic-title-wrapper {
+          padding: 19px 13.25px 13px 13.25px;
+          margin-bottom: 0;
+          border-radius: 10px 10px 0 0;
+          max-height: 59px;
+
+          .index-view__topic-buttons {
+            i {
+              color: #fff;
+            }
+
+            .plus-icon {
+              color: #fff !important;
+            }
+          }
+
+          .indexview-topic-segment_topic-icon {
+            font-size: 22.5px !important;
+            // color: #fff !important;
+          }
+
+          .wiki-card_title {
+            font-size: 24px;
+            line-height: 27.6px;
+            font-weight: 700;
+            padding-left: 6.25px;
+            // color: #808080;
+
+            .activity-indicator {
+              margin-bottom: 1.5px;
+            }
+          }
+
+          & + div {
+            .index-view__topic-title-wrapper {
+              margin: 0;
+
+              .wiki-card_title {
+                font-size: 14px;
+              }
+            }
+          }
+
+          & + div {
+            overflow: auto;
+            height: 437px;
+          }
+        }
+
+        .wiki-list_topic-dropzone {
+          // padding-left: 13.25px;
+          margin: 0;
+          // border-bottom: 1px solid #e8e8e8;
+
+          .add-card-card_section {
+            margin-top: 0;
+          }
+
+          .wiki-card {
+            padding: 11.02px 0;
+            padding-left: 13.25px;
+            border-bottom: 1px solid #e8e8e8;
+
+            & a > .line-clamp {
+              color: #808080;
+            }
+
+            &.add-board-button {
+              color: #a2a2a2;
+              cursor: pointer;
+
+              & > span {
+                padding-left: 8px;
+              }
+
+              &:hover {
+                color: #f2ab13;
+              }
+            }
+
+            .add-card-card_content {
+              width: 100%;
+              justify-content: flex-start;
+              padding-left: 8px;
+
+              &.full-height a {
+                padding-top: 0;
+              }
+            }
+          }
+
+          .wikilist-topic-segment_topic-content {
+            .wikilist-topic-segment_topic-content {
+              .task-view_drag-card {
+                & > .pl15 {
+                  padding-left: 10px;
+                }
+              }
+            }
+          }
+
+          .index-view__topic-title-wrapper {
+            padding: 11.76px 0 11.25px 13.25px;
+            border-bottom: 1px solid #e8e8e8;
+
+            & a > .line-clamp {
+              color: #808080;
+            }
+
+            & + div {
+              & > div:nth-child(2) {
+                padding-left: 10px;
+              }
+
+              .wikilist-topic-segment_topic-content {
+                .task-view_drag-card {
+                  & > .pl15 {
+                    padding-left: 10px;
+                  }
+                }
+              }
+            }
+          }
+
+          .wiki-view_card-container {
+            margin: 0;
+          }
+
+          & + div {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.file-boards {
+    .notch {
+      margin-right: 45px;
+      border-radius: 10px;
+      width: 96px;
+      margin-bottom: -10px;
+      background: none !important;
+      // clip-path: polygon(15% 25%, 85% 25%, 100% 100%, 0% 100%);
+
+      & > div {
+        display: none;
+      }
+    }
+
+    .project-lens__topicSegment {
+      height: 247px;
+
+      .index-view__topic-title-wrapper {
+        & + div {
+          .index-view__topic-title-wrapper {
+            .index-view__topic-buttons {
+              margin-right: 13px;
+            }
+          }
+        }
+      }
+
+      & > .index-view__topic-title-wrapper {
+        & + div {
+          overflow: auto;
+          max-height: 188px !important;
+        }
+      }
+
+      .add-card-card-container {
+        .add-card-card_section {
+          padding: 11px 13.25px;
+          padding-left: 18.5px;
+          border-bottom: 1px solid #e8e8e8;
+        }
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+
+    .index-grid-layout {
+      grid-template-columns: repeat(auto-fill, minmax(334px, 0.2fr));
+    }
+  }
+
+  &.note-boards {
+    .index-grid-layout {
+      .notch {
+        display: none;
+      }
+
+      .project-lens__topicSegment {
+        height: 391px;
+
+        &.add_view {
+          &::after {
+            content: none;
+          }
+        }
+
+        &:not(.add_view) {
+          &::before {
+            content: '';
+            left: 20px;
+            border-style: solid;
+            border-width: 1px;
+            height: 100%;
+            border-color: rgba(0, 0, 0, 0.03);
+            position: absolute;
+            bottom: 0;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: 35px;
+            border-style: solid;
+            border-width: 4px;
+            height: 100%;
+            border-color: #363940;
+            transition: none;
+            box-shadow: none;
+          }
+        }
+
+        & > .index-view__topic-title-wrapper {
+          height: 203px;
+          margin: 0 40px 0 21px;
+          max-height: 203px;
+
+          & + div {
+            height: 131px !important;
+            padding: 0 40px 0 21px;
+            background: rgba(0, 0, 0, 0.03);
+
+            & > div {
+              max-width: 230px;
+            }
+          }
+        }
+        .wiki-list_topic-dropzone {
+          .wiki-card,
+          .index-view__topic-title-wrapper {
+            border-bottom: none;
+
+            a.card-title {
+              min-width: unset;
+              overflow: auto;
+            }
+
+            & a > .line-clamp,
+            .add-card-card_content > a,
+            &.add-board-button {
+              color: #fff;
+            }
+
+            .material-icons,
+            .material-icons-outlined {
+              color: #fff !important;
+            }
+          }
+
+          .index-view__no-items-label {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .index-grid-layout {
+      grid-template-columns: repeat(auto-fill, 293px);
+    }
+  }
+}
+
+.index-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 50px 40px;
+  background-color: transparent;
+  flex: 80%;
+}
+
+.index-view__topic-title-wrapper {
+  margin-bottom: 10px;
+  &:hover {
+    .index-view__topic-buttons {
+      visibility: visible;
+    }
+  }
+
+  .wiki-card_title {
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 3px;
+    position: relative;
+    line-height: 24px;
+    top: -2px;
+  }
+
+  & > .icon-container {
+    margin-top: -6px;
+  }
+
+  .index-view-topic-caret {
+    margin-right: -0.5rem;
+  }
+}
+
+.index-view__topic-buttons {
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  margin-left: auto;
+
+  &.show_add {
+    > :first-child {
+      visibility: visible;
+
+      > :first-child {
+        > :first-child {
+          > :first-child {
+            color: rgb(111, 207, 151);
+          }
+        }
+      }
+    }
+  }
+
+  .index-view-add-button {
+    & > a {
+      padding-top: 2px;
+    }
+
+    .plus-icon {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+}
+
+.index-view__no-items-label {
+  color: $colour-grey-light-3;
+  font-style: italic;
+  font-size: 12px;
+  margin: 5px 0px 5px 30px;
+}
+
+// .indexview-topic-segment_topic-icon {
+//   transform: scaleY(1.2);
+//   color: rgb(155, 81, 224);
+// }
+
+.index-view__list {
+  max-height: 0%;
+  transition: 0.3s;
+  overflow: hidden;
+  &.open {
+    transition: 1s;
+    max-height: 100%;
+  }
+}
+
+.white-color {
+  color: #fff !important;
+}

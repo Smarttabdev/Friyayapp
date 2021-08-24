@@ -1,0 +1,136 @@
+.signup-page {
+  // background-image: url('/images/signup-bg.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-position: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(220, 20, 60);
+
+  .separator {
+    background: #fff;
+  }
+  .big-loader {
+    font-size: 57px;
+    color: white;
+    margin-bottom: 50px;
+  }
+  .existing-user {
+    color: whitesmoke;
+    text-align: center;
+    h2 {
+      color: whitesmoke;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-logo {
+    filter: invert(100%);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 8rem;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  &-form {
+    position: relative;
+    width: 50%;
+    margin-top: 1rem;
+  }
+  &-social {
+    width: 52%;
+  }
+
+  &-info {
+    color: #fff;
+    position: absolute;
+  }
+
+  &-input {
+    .form-control {
+      color: #fff;
+      font-size: 3rem;
+      height: 50px;
+      font-weight: 300;
+      vertical-align: middle;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0 0 10px 0;
+      border: none;
+      border-bottom: 0.2rem solid rgba(255, 255, 255, 0.6);
+
+      &:focus + .separator {
+        transform: scaleX(1) translateY(-2px);
+        opacity: 1;
+      }
+      &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #eee !important;
+        opacity: 1; /* Firefox */
+      }
+    }
+  }
+
+  &-submit-btn {
+    position: absolute;
+    position: absolute;
+    bottom: 2rem;
+    left: 93%;
+    background: transparent;
+    border: none;
+    i.fa {
+      font-size: 4rem;
+      color: #fff;
+    }
+  }
+
+  .auth_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 30px 0;
+    height: 50px;
+    width: 100%;
+    border-radius: 3rem;
+    border: 2px solid rgba(0, 0, 0, 0.04);
+  }
+  &-slack,
+  &-google {
+    background-color: #fff;
+    font-size: 22px;
+  }
+  &-slack {
+    img {
+      height: 41px;
+    }
+  }
+  &-google {
+    img {
+      height: 40px;
+    }
+  }
+  &-policy {
+    text-align: center;
+    // color: #eee;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+  }
+  .text {
+    width: 50%;
+    // color: #ffffffcc;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: 900;
+  }
+}

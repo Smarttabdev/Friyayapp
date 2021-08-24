@@ -1,0 +1,170 @@
+// @import "components/shared/royal.min.css";
+
+#editor {
+  //remove border
+  .fr-box.fr-basic .fr-wrapper,
+  .fr-box.fr-basic .fr-toolbar,
+  .fr-box.fr-basic .second-toolbar {
+    border-color: transparent;
+  }
+
+  // icon color
+  .fr-box.fr-basic .fr-toolbar .fr-svg path {
+    fill: #b0b0b0;
+  }
+
+  // dropdown arrow color
+  .fr-modal .fr-command.fr-btn.fr-dropdown.fr-active:after,
+  .fr-popup .fr-command.fr-btn.fr-dropdown.fr-active:after,
+  .fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active:after,
+  .fr-modal .fr-command.fr-btn.fr-dropdown:after,
+  .fr-popup .fr-command.fr-btn.fr-dropdown:after,
+  .fr-toolbar .fr-command.fr-btn.fr-dropdown:after {
+    border-top-color: #b0b0b0;
+    border-bottom-color: #b0b0b0;
+  }
+
+  // color of plain button like text
+  .fr-toolbar .fr-command.fr-btn {
+    color: #b0b0b0;
+  }
+
+  //first group of toolbar should be left aligned
+  .fr-toolbar .fr-btn-grp.fr-float-left:first-of-type {
+    margin-left: 0px;
+  }
+
+  // the actualy body content div
+  .fr-element {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  // toolbar bottom line
+  .fr-newline {
+    background-color: transparent;
+  }
+
+  // for anchor colors
+  .fr-element a {
+    color: #369acf;
+  }
+
+  // fix hide on scroll of fr-wrapper
+  .fr-toolbar {
+    z-index: 2;
+  }
+
+  // to inline codox with toolbar
+  .fr-top > .codox-styles {
+    float: right;
+    z-index: 3;
+    position: sticky;
+
+    .codox-session-info-avatar {
+      position: relative;
+      top: 8px;
+    }
+
+    .codox-avatar {
+      .codox-session-tooltip {
+        right: 0;
+
+        &:after {
+          right: 10px;
+          left: unset;
+        }
+      }
+    }
+  }
+}
+
+.card-details {
+  .froala_banner_link_style {
+    display: block;
+    color: #555 !important;
+    border: solid 1px #ebebeb;
+    border-radius: 5px;
+    padding: 25px 10px 25px 0;
+    position: relative;
+
+    .avatar_url {
+      position: absolute;
+      width: 78px;
+      height: 72px;
+      top: 0.2px;
+      left: 0.2px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    & > p {
+      position: absolute;
+      left: 100px;
+      top: 13px;
+      line-height: 25px;
+      max-height: 50px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 100%;
+      right: 0;
+
+      & > span {
+        font-weight: 700;
+      }
+    }
+
+    &::before {
+      content: '';
+      background-color: #ebebeb;
+      padding: 28px 40px 28px 40px;
+      border-radius: 5px 0 0 5px;
+      margin-right: 7.5px;
+      margin-left: -0.5px;
+    }
+
+    &.fr-file {
+      padding: 5px 5px 5px 0;
+      &::after {
+        content: none;
+      }
+
+      &::before {
+        font-family: 'FontAwesome';
+        content: '\f15b';
+        font-weight: lighter;
+        padding: 8.5px 10px 9px 10px;
+      }
+    }
+  }
+}
+
+// putting it outside #editor because we need this in preview
+.fr-deletable.fr-tribute,
+.card-details-preview_content .item-text a {
+  color: #369acf;
+}
+
+// Adding padding for Froala table cells
+.fr-view table td,
+.fr-view table th {
+  padding: 5px 7px;
+}
+
+.fr-popup.fr-active {
+  z-index: $z-index-max + 1 !important;
+}
+
+/*
+  Compact inline toolbar
+  Putting it outside #editor because inline toolbar is added to body tag
+ */
+
+.fr-toolbar.fr-inline {
+  .fr-btn-grp {
+    margin: 0 3px;
+    .fr-command.fr-btn {
+      margin: 0px;
+    }
+  }
+}

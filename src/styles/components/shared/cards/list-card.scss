@@ -1,0 +1,155 @@
+.list-card {
+  background: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  margin-bottom: 10px;
+
+  > .add-card-card_content {
+    height: 40px;
+  }
+
+  &:hover {
+    .list-card__nested-cards-add,
+    .list-card__nested-cards-caret {
+      visibility: visible;
+    }
+  }
+
+  &.show-caret .list-card__nested-cards-caret {
+    visibility: visible;
+  }
+
+  .nest-card-zone {
+    margin-left: -6px;
+    height: 65px;
+    padding-top: 18px;
+  }
+}
+
+.list-card__wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  position: relative;
+
+  .card-title-container {
+    flex-basis: 40%;
+    max-width: 70rem;
+    min-width: 45rem;
+  }
+
+  .card-file-list {
+    padding: 5px 0;
+    flex-grow: 1;
+
+    .attachment-file {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      padding: 2px 0;
+
+      & > span:first-child {
+        i {
+          font-size: 1.5rem !important;
+        }
+      }
+    }
+  }
+}
+
+.list-card__nested-cards-add {
+  visibility: hidden;
+  display: flex;
+  .material-icons {
+    color: #c4c4c4 !important;
+    &:hover {
+      color: #f2ab13 !important;
+    }
+  }
+}
+
+.list-card__nested-cards-caret {
+  margin-right: -7px;
+  width: 1rem;
+  .material-icons {
+    font-size: 12px;
+  }
+}
+
+.list-card__nested-cards {
+  padding: 0 50px 8px 50px;
+}
+
+.list-card__nested-card {
+  font-weight: normal !important;
+}
+
+.custom-drag-preview .list-card {
+  @extend .dragging-shadow;
+  background: transparent !important;
+}
+
+.card-title-container {
+  display: flex;
+  align-items: center;
+  margin-left: 1.7rem;
+
+  .list-card_title-topic-container {
+    width: 100%;
+  }
+}
+
+.list-card_title-topic-container {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 320px);
+}
+
+.list-card_title {
+  color: #555;
+  font-weight: 500;
+  line-height: 20px;
+  max-width: calc(100% - 150px);
+  overflow: hidden;
+  padding-right: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-card_topic-link {
+  color: #888;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 150px;
+  overflow: hidden;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &:hover {
+    color: #555;
+  }
+}
+
+.list-card_label-container {
+  padding: 0 15px;
+  width: 150px;
+  position: absolute;
+}
+
+.list-card_actions-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  width: 150px;
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+
+  .card-date {
+    color: #808080;
+    padding-right: 2rem;
+  }
+}

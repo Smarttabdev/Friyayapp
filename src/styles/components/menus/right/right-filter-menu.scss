@@ -1,0 +1,32 @@
+.right-filter-menu {
+  padding: 5px 0;
+  border-top-right-radius: 20px;
+  background-color: #fff;
+  border-left: 1px solid #3e3f42;
+  position: relative;
+  transition: opacity 3s ease-out;
+  overflow-y: auto;
+  background-color: #3e3f42;
+  color: #fff;
+
+  > .buttons_header {
+    margin: 0 13px 5px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  > .right-submenu {
+    > .right-submenu_item {
+      &.option {
+        color: #fff;
+        > .active {
+          color: #f2c94c;
+        }
+        &:hover {
+          color: #f2c94c;
+        }
+      }
+    }
+  }
+}

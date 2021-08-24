@@ -1,0 +1,131 @@
+.users-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 0 50px;
+  overflow: auto;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background: #fff;
+  color: #555;
+  .users-team,
+  .users-people {
+    h3 {
+      margin-right: 10px;
+      color: #696969;
+      font-weight: 800;
+    }
+    .office-hours {
+      font-weight: 600;
+      margin-right: 10px;
+    }
+  }
+  .users-team {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #ccc;
+    padding: 20px;
+
+    > div {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .my-team-list {
+      margin: 3rem 0;
+    }
+  }
+  .users-people {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    > div {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .people-list {
+      margin: 0;
+    }
+  }
+  .team-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 30px 60px 30px 0;
+    .team-box {
+      height: 50px;
+      width: 50px;
+      border-radius: 5px;
+      &.color-1 {
+        color: lighten($color-1, 40%);
+        background-color: $color-1;
+      }
+      &.color-2 {
+        color: lighten($color-2, 35%);
+        background-color: $color-2;
+      }
+      &.color-3 {
+        color: lighten($color-3, 35%);
+        background-color: $color-3;
+      }
+      &.color-4 {
+        color: lighten($color-4, 35%);
+        background-color: $color-4;
+      }
+      &.color-5 {
+        color: lighten($color-5, 35%);
+        background-color: $color-5;
+      }
+      &.color-6 {
+        color: lighten($color-6, 35%);
+        background-color: $color-6;
+      }
+      &.color-7 {
+        color: lighten($color-7, 35%);
+        background-color: $color-7;
+      }
+      &.color-8 {
+        color: lighten($color-8, 35%);
+        background-color: $color-8;
+      }
+      &.color-9 {
+        color: lighten($color-9, 35%);
+        background-color: $color-9;
+      }
+    }
+
+    .icon-container {
+      display: none;
+    }
+
+    &:hover .icon-container {
+      display: block;
+    }
+
+    .team-details {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+      strong {
+        margin-right: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .team-title {
+        display: flex;
+        flex-direction: row;
+        line-height: 1.8;
+      }
+      .member-count {
+        color: #888888;
+      }
+    }
+  }
+}

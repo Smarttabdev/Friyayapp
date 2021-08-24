@@ -1,0 +1,79 @@
+.goal-boards-container {
+  margin: 29px 34px;
+
+  .goal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+}
+
+.goal-box-container {
+  height: 23.1rem;
+  width: 100%;
+  min-width: 60rem;
+  border: solid 1px #eaeaea;
+  background: #fff;
+  border-radius: 15px;
+
+  .title-header-container {
+    background: #56ccf2;
+    height: 4.1rem;
+    border-radius: 15px 15px 0 0;
+    padding: 9px 15.38px 11px 15.38px;
+    color: #fff;
+    display: flex;
+    gap: 11.37px;
+
+    .icon-container {
+      .tiphive-icon {
+        font-size: 18px;
+        margin-bottom: 2.5px;
+      }
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      align-items: flex-end;
+      line-height: 17px;
+    }
+
+    .fa-hashtag {
+      font-size: 14px;
+      padding-bottom: 3.5px;
+    }
+  }
+
+  .SprintBar {
+    background: transparent;
+    margin: 0;
+    padding: 20px 95px 11px 15.38px;
+  }
+
+  .loading-indicator-container {
+    justify-content: flex-start;
+
+    img {
+      width: 2rem;
+    }
+  }
+
+  &.placeholder {
+    border: dashed 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+
+    .add-board-button {
+      cursor: pointer;
+    }
+
+    .add-sub-topic-input-footer {
+      button {
+        margin: auto;
+      }
+    }
+  }
+}

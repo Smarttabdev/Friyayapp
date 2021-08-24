@@ -1,0 +1,21 @@
+.groupby-dropdown {
+  display: inline-flex;
+  padding: 3px;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.power_icon {
+  font-size: 14px !important;
+}
+.add_icon {
+  align-self: center;
+}
+.group-by-text {
+  color: $colour-grey-light-5;
+  font-family: Helvetica;
+  margin-left: 3px;
+  margin-right: 4px;
+  font-size: 14px;
+  line-height: 22px;
+}

@@ -1,0 +1,317 @@
+$main-section-background: rgba(110, 111, 117, 0.1);
+
+.inbox_lens_container {
+  padding: 10px 0;
+  color: #b1b2b4;
+
+  .starter_header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 42px;
+
+    .add_button {
+      // override
+      .icon-container {
+        padding-top: 5px;
+        i {
+          font-size: 40px;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    .tool_filter {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .tool_tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 3.5rem;
+      height: 3.5rem;
+      border: 1px solid #eaeaea;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      i,
+      .fa {
+        font-size: 16px;
+        // padding-right: 4px;
+      }
+
+      .fa {
+        font-size: 12px;
+      }
+
+      .count {
+        font-size: 10px;
+        font-weight: 600;
+        padding-left: 5px;
+      }
+    }
+
+    .filter_container {
+      display: flex;
+      justify-content: flex-end;
+      margin: 5px 0;
+
+      .search-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+
+        span.clear {
+          position: absolute;
+          top: 25%;
+          right: 12%;
+          display: none;
+          font-size: 12px;
+          font-weight: bold;
+          cursor: pointer;
+
+          &.open {
+            display: inline-block;
+          }
+        }
+
+        .font-size-16 {
+          font-size: 16px;
+        }
+
+        .search-input {
+          border-radius: 17px;
+          background-color: transparent;
+          height: 23px;
+          width: 125px;
+          margin-right: 13px;
+          padding: 0px 15px 0px 15px;
+          border-radius: 20px;
+          display: none;
+          transition: display 250ms ease-out;
+
+          &:focus {
+            outline: none;
+          }
+          &.open {
+            display: inline-block;
+          }
+        }
+      }
+
+      i,
+      .fa {
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+
+      .fa {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .filters_section {
+    padding: 15px 35px 0 35px;
+    display: flex;
+    align-items: center;
+
+    .user_type_filters,
+    .status_filters,
+    .label_filters {
+      display: flex;
+      align-items: center;
+      > * {
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    }
+
+    .user_type_filters {
+      > * {
+        padding: 2px 10px;
+        border-radius: 5px;
+        min-width: 50px;
+      }
+      .is_selected {
+        background-color: #56ccf2;
+        color: #000;
+      }
+    }
+
+    .label_filters {
+      margin-left: 20px;
+      .label_filters_item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        min-width: 80px;
+        border-radius: 5px 5px 0 0;
+        background-color: rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          > :last-child {
+            visibility: initial;
+          }
+        }
+
+        > :last-child {
+          margin-left: 5px;
+          visibility: hidden;
+        }
+
+        &.is_selected {
+          background-color: $main-section-background;
+          > :first-child {
+            color: #9b51e0;
+          }
+        }
+      }
+
+      .add_label_section {
+        position: relative;
+
+        .card-show-side-labels {
+          left: 0;
+          top: 20px;
+        }
+      }
+    }
+
+    .status_filters {
+      > * {
+        padding: 10px;
+        min-width: 80px;
+        border-radius: 5px 5px 0 0;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .is_selected {
+        color: #f2c94c;
+        background-color: $main-section-background;
+      }
+    }
+  }
+
+  .main_section {
+    // padding: 10px 0;
+    display: flex;
+    background-color: $main-section-background;
+
+    .updates_section {
+      flex: 5;
+      padding-left: 35px;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+      .inbox_lens_update_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px 10px 0;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+
+        .first_half {
+          display: flex;
+          align-items: center;
+
+          .card_type_container {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 0 10px;
+            border-radius: 100%;
+          }
+
+          .user_name {
+            margin-left: 10px;
+            margin-right: 40px;
+            width: 125px;
+
+            .user-avatar_link {
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .link-tooltip-container {
+            cursor: initial;
+          }
+
+          .card_title_name {
+            // margin-left: 10px;
+            .card-title {
+              color: inherit;
+              &:hover {
+                color: #f2ab13;
+              }
+            }
+          }
+
+          .card_labels_section {
+            margin-left: 20px;
+
+            .card-labels {
+              margin: 0;
+              .card-label {
+                border-radius: 10px;
+                font-size: 14px;
+              }
+            }
+          }
+
+          .card_activity_info {
+            margin-left: 15px;
+            color: #56ccf2;
+          }
+        }
+      }
+    }
+
+    .inbox_lens_boards_section {
+      flex: 1;
+      padding: 10px 30px 0 30px;
+
+      .inbox_lens_board_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+
+        > :first-child {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          padding: 5px 0 5px 5px;
+        }
+
+        > .navigate_button {
+          display: none;
+          padding: 5px 5px 5px 0;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+          color: inherit;
+          > .navigate_button {
+            display: initial;
+          }
+        }
+
+        &.isSelected {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+export default {
+  add: 'DB_COLUMNORDERSORDERS__ADD_COLUMNORDERS'
+};

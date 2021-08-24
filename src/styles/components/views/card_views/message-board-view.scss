@@ -1,0 +1,230 @@
+.message-board-board {
+  // background-color: white;
+  height: auto !important;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  // editor style override
+  .text-editor-wrapper .fr-box {
+    .comment-box .fr-wrapper {
+      box-shadow: none !important;
+    }
+
+    .fr-toolbar {
+      border: none !important;
+      box-shadow: none !important;
+      background-color: transparent;
+    }
+
+    .show-placeholder {
+      box-shadow: none !important;
+    }
+
+    .fr-wrapper {
+      overflow: hidden !important;
+      box-shadow: none;
+      background-color: transparent;
+    }
+    .fr-wrapper + div {
+      display: none !important;
+    }
+
+    .fr-element {
+      color: inherit;
+    }
+  }
+
+  // card details override
+  .card-details {
+    margin-left: 50px;
+    padding-top: 25px !important;
+  }
+
+  .card-details-editor .button {
+    background-color: transparent;
+    border: 1px solid rgba(117, 117, 117, 0.15);
+  }
+
+  .comment-item {
+    border-top: none;
+  }
+
+  .btn-default {
+    background-color: transparent;
+    border-color: rgba(117, 117, 117, 0.15);
+    color: #555;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  .card-label-container {
+    margin-right: 5px;
+  }
+
+  .list-card_actions-container {
+    width: inherit;
+    position: static;
+  }
+}
+
+.message-board__card-body {
+  font-size: 16px;
+}
+
+.message-board__card-detail--new {
+  .card-details-editor_title-input {
+    font-size: 24px !important;
+  }
+}
+
+.message-board__card-detail {
+  width: 100%;
+  position: relative;
+
+  .cardTopicTitle {
+    padding-left: 10px;
+  }
+
+  .card-title {
+    font-weight: 600;
+    padding-bottom: 2px;
+    color: #292b2d;
+    font-size: 16px;
+  }
+
+  .card-topic-link {
+    color: currentColor !important;
+  }
+
+  .card-details-editor_title-input {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.15);
+    background-color: transparent;
+  }
+
+  .card-details-editor {
+    margin-bottom: 10px;
+
+    .bottom-btns {
+      .file-upload-box {
+        .file-action-buttons-section {
+          .btn {
+            color: #555;
+          }
+        }
+      }
+    }
+
+    .text-editor-wrapper .fr-box.fr-basic .fr-element {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.message-board__row-actions-right {
+  margin-left: auto;
+  display: flex;
+}
+
+.message-board__comments-list {
+  padding-top: 15px;
+
+  .comment-box {
+    .fr-wrapper {
+      border: none;
+      border-top: 1px solid rgba(117, 117, 117, 0.15) !important;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  }
+
+  .comment-box .fr-wrapper {
+    box-shadow: none !important;
+  }
+
+  .comment-item {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+
+    .comment-item_avatar-container {
+      padding-left: 0px;
+
+      .link-tooltip-container {
+        margin-left: 0px;
+      }
+    }
+
+    .comment-item_commenter-container {
+      margin-bottom: 0;
+    }
+
+    .comment-item_comment-container {
+      padding: 0 10px 0 0;
+    }
+    .comment-item_avatar-container {
+      padding: 0 0 10px 0;
+    }
+  }
+
+  .comment-item--in-edit-mode {
+    .comment-item_comment-container {
+      padding-top: 2.5px;
+    }
+  }
+
+  .comment-item_comment {
+    margin-bottom: 2px;
+    color: #888888;
+  }
+
+  .comment-item_commenter {
+    font-weight: 600;
+    .comment-item_date {
+      font-weight: normal;
+      font-size: 12px;
+      color: #888888;
+      margin-left: 10px;
+    }
+  }
+}
+
+.message-board__card-comments-count {
+  // color: $colour-grey-light-4;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.message-board__card {
+  // padding-top: 5px;
+  // margin-bottom: 15px;
+  box-shadow: 0 1px rgba(117, 117, 117, 0.15);
+  padding: 20px 0 4px 0;
+}
+
+.message-board__chat-bubble-icon-container {
+  margin-left: 6px;
+  margin-right: 8px;
+  height: 26px;
+}
+
+.message-board__message-time {
+  // color: $colour-grey-light-4;
+}
+
+.message-board__chat-bubble-icon {
+  color: $colour-grey-light-4;
+  font-size: 20px !important;
+}
+
+.topicLink-time {
+  display: flex;
+  align-items: baseline;
+  font-size: 12px;
+  color: #888888;
+}

@@ -1,0 +1,52 @@
+.team-projects-lens {
+  margin: 29px 34px;
+
+  .team-projects-list {
+    border: 1px solid #e3e1e1;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 35px;
+    transition: all 500ms ease-in-out;
+    max-width: 1200px;
+    &:hover {
+      .team-projects-list__remove {
+        opacity: 1;
+      }
+    }
+
+    &__remove {
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      transition: transform 500ms ease-in-out;
+    }
+
+    &__bottom {
+      height: 0;
+      opacity: 0;
+      transition: all 500ms ease-in-out;
+
+      &-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-left: 8px;
+      }
+    }
+
+    &__add-board {
+      background-color: #fafafa;
+      padding: 10px;
+      border: 1px solid #e3e1e1;
+      border-radius: 10px;
+      width: fit-content;
+      margin-left: 8px;
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.dropdown-row-item-std {
+  @extend .dark-grey-link;
+  padding: 5px;
+}
+
+.dropdown-row-item-std + .dropdown-row-item-std {
+  border-top: 1px solid $colour-grey-light-2;
+}
+
+.custom-tool-rename {
+  width: 100%;
+  input {
+    width: 100% !important;
+  }
+}
