@@ -1,0 +1,501 @@
+.main-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 0;
+  font-size: 14px;
+  z-index: 600;
+  border-radius: 20px;
+
+  &.panel-open {
+    min-height: 600px;
+    max-height: calc(100vh - 48px - 12px - 75px);
+    display: flex;
+    overflow: hidden;
+    bottom: 12px;
+  }
+
+  .activity-bar {
+    background: #f1f1f1;
+    padding: 13px 10px 7px 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 45px;
+    .caret {
+      margin-top: -4px;
+      margin-bottom: 0;
+      cursor: pointer;
+      display: none;
+    }
+    .recent-badge {
+      margin-bottom: 5px;
+      width: 25px;
+      height: 25px;
+      background-color: #eb5756;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.1s 0.25s ease-out, height 0.1s 0.25s ease-out;
+    }
+    .activity-icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 280px;
+      transition: opacity 0.3s 0.2s ease-out, max-height 0.2s ease-out;
+      .btn {
+        position: relative;
+        margin-bottom: 12px;
+        cursor: pointer;
+        max-width: 24px;
+      }
+      .close-btn {
+        display: none;
+        margin-top: 8px;
+      }
+    }
+    &:hover,
+    &.show-icons {
+      .caret {
+        display: block;
+      }
+      .recent-badge {
+        opacity: 0;
+        height: 0;
+        transition: opacity 0.1s ease-out, height 1ms 0.1s ease-out;
+      }
+    }
+    &:not(.show-icons) {
+      &:not(:hover) {
+        .activity-icons {
+          opacity: 0;
+          max-height: 0;
+          transition: opacity 10ms ease-out, max-height 0.2s ease-out;
+        }
+      }
+    }
+    .three-dots {
+      white-space: nowrap;
+      span {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        &:not(:last-child) {
+          margin-right: 2px;
+        }
+      }
+      span:nth-child(1) {
+        background-color: #f2994a;
+      }
+      span:nth-child(2) {
+        background-color: #55ccf2;
+      }
+      span:nth-child(3) {
+        background-color: #9b51e0;
+      }
+    }
+  }
+
+  &.panel-open {
+    .activity-bar {
+      .caret {
+        display: none;
+      }
+      .recent-badge {
+        display: none;
+      }
+      .activity-icons {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  &.panel-open {
+    .activity-bar {
+      border-top-left-radius: 0;
+      background-color: #2b3481;
+      &.show-icons {
+        .caret {
+          display: none;
+        }
+      }
+      .activity-icons {
+        .btn {
+          margin-bottom: 20px;
+          i {
+            color: #caccdf !important;
+          }
+          &.active {
+            i {
+              color: #f2c94c !important;
+            }
+          }
+        }
+        .close-btn {
+          display: block;
+        }
+      }
+      .three-dots {
+        display: none;
+      }
+    }
+  }
+
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    margin-top: 3px;
+    &.red {
+      background: red;
+    }
+    &.green {
+      background: lightgreen;
+    }
+    &.right {
+      right: -17px;
+    }
+    &.left {
+      left: -17px;
+    }
+  }
+
+  .panel-window {
+    min-height: 100%;
+    background: #eeeeee;
+    color: #515050;
+    .topbar {
+      padding: 20px 12px 12px 20px;
+      border-bottom: 1px solid #e3e3e3;
+      display: flex;
+      .title {
+        font-weight: bold;
+        margin-right: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 24px;
+      }
+    }
+    .list-item {
+      margin-left: 12px;
+      padding: 12px 18px 12px 8px;
+      border-bottom: 1px solid #e3e3e3;
+      .icon {
+        margin-right: 18px;
+      }
+    }
+    .panel {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+    }
+    .panel-main {
+      flex-grow: 1;
+      overflow: auto;
+    }
+
+    .trending {
+      width: 540px;
+      .trending-list {
+        .trending-item {
+          display: flex;
+          align-items: center;
+          &.type-post {
+            .icon {
+              color: #56ccf2;
+            }
+          }
+          &.type-comment {
+            .icon {
+              color: #f2c94c;
+            }
+          }
+          &.type-event {
+            .icon {
+              color: #9b51e0;
+            }
+          }
+        }
+      }
+    }
+
+    .recent {
+      width: 540px;
+      .recent-list {
+        .recent-item {
+          display: flex;
+          align-items: center;
+          &.type-post {
+            .icon {
+              color: #56ccf2;
+            }
+          }
+          &.type-comment {
+            .icon {
+              color: #f2c94c;
+            }
+          }
+          &.type-event {
+            .icon {
+              color: #9b51e0;
+            }
+          }
+        }
+      }
+    }
+
+    .todos {
+      width: 540px;
+      .todo-list {
+        .todo-item {
+          display: flex;
+          align-items: center;
+          padding-left: 5px;
+          .checkbox {
+            margin-right: 15px;
+            cursor: pointer;
+          }
+          .pulse-btn {
+            margin-left: auto;
+            :global(.dropdown-menu-updates-pulse) {
+              left: unset !important;
+              right: 40px;
+            }
+          }
+        }
+        .add-card-item {
+          border-bottom: none;
+          .add-card-btn {
+            margin-left: 30px;
+            color: #a5a5a5;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .user-activity {
+      width: 540px;
+      .topbar {
+        .expand-btn {
+          margin-left: auto;
+        }
+      }
+      .activity-list {
+        .activity-item {
+          display: flex;
+          align-items: center;
+          color: #808080;
+          .avatar {
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            margin-right: 8px;
+          }
+          .author {
+            margin-right: 8px;
+          }
+          .label {
+            margin-right: 8px;
+            white-space: nowrap;
+          }
+          .text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 8px;
+          }
+          .time {
+            margin-left: auto;
+            color: #a5a5a5;
+            white-space: nowrap;
+          }
+          &.type-completed {
+            .label {
+              color: #87d5a7;
+            }
+          }
+          &.type-edited {
+            .label {
+              color: #b865a8;
+            }
+          }
+          &.type-newCard {
+            .label {
+              color: #a565e2;
+            }
+          }
+          &.type-updateAdded {
+            .label {
+              color: #eb5757;
+            }
+          }
+          &.type-labelAdded {
+            .label {
+              color: #73d3f1;
+            }
+          }
+        }
+      }
+    }
+
+    .comments {
+      width: 540px;
+      min-height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      &.page-boards {
+        .topbar {
+          border-bottom: none;
+        }
+        .input.search {
+          margin-top: -10px;
+        }
+        .list-group {
+          margin-bottom: 35px;
+          .group-title {
+            margin-left: 20px;
+            font-weight: bold;
+          }
+          .list-item {
+            border-bottom: none;
+            padding-top: 2px;
+            padding-bottom: 3px;
+            &:first-child {
+              padding-top: 8px;
+            }
+          }
+          .board-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .dot-icon {
+              width: 8px;
+              height: 8px;
+              background-color: #eb5757;
+              border-radius: 50%;
+              margin-right: 25px;
+            }
+            .icon {
+              margin-right: 4px;
+              color: #9b51e0;
+            }
+            .caret {
+              margin-right: 10px;
+              font-size: 10px;
+            }
+            .mention-indicator {
+              color: #f2c94c;
+            }
+            &.unread {
+              .board-title {
+                font-weight: bold;
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+      }
+      &.page-comments {
+      }
+      .comment-list {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: 10px;
+        padding-left: 3px;
+        .comment-item {
+          border-bottom: none;
+          display: flex;
+          .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+          }
+          .main {
+            .author {
+              font-weight: bold;
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
+      .input {
+        padding: 12px 10px 20px 16px;
+        input {
+          width: 100%;
+          background: #f6f6f6;
+          border: 0;
+          border-radius: 6px;
+          height: 48px;
+          outline: none;
+          padding: 15px;
+        }
+      }
+    }
+
+    .online-users {
+      width: 350px;
+      .topbar {
+        .roles-btn {
+          margin-left: auto;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .plus {
+            margin-left: 6px;
+            font-size: 8px;
+          }
+        }
+      }
+      .lists {
+        padding-top: 24px;
+        padding-bottom: 8px;
+        .role-item {
+          .role {
+            margin-left: 30px;
+          }
+          .user-list {
+            padding: 10px 0 50px 0;
+            .user-item {
+              position: relative;
+              display: flex;
+              align-items: center;
+              padding: 5px 12px 5px 30px;
+              .avatar {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                margin-right: 10px;
+              }
+              .name {
+                margin-right: 8px;
+              }
+              .time {
+                font-size: x-small;
+              }
+              .indicator {
+                &.left {
+                  left: -4px;
+                  top: 13px;
+                }
+                &.green {
+                  background-color: #6fcf97;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

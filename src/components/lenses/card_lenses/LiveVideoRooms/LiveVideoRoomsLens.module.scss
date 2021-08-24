@@ -1,0 +1,97 @@
+.live-video-room-tool {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 35px;
+}
+
+.empty-message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.video-room-card {
+  width: 360px;
+  height: 305px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-right: 45px;
+  margin-bottom: 45px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 22px 9px 22px;
+
+  h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .video-icon {
+    color: #eb5757;
+    margin-right: 10px;
+    font-size: 22px;
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  padding: 11px 15px 10px 15px;
+  line-height: 1;
+
+  .user-names {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    :global(.material-icons-outlined) {
+      margin-right: 12px;
+      font-size: 12px;
+      margin-top: -2px;
+    }
+  }
+}
+
+.avatars-bar {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 4px 17px;
+  min-height: 44px;
+  overflow: hidden;
+}
+
+.avatar {
+  display: inline-block;
+  width: 93px;
+  height: 93px;
+  border-radius: 12px;
+  border: 3px solid black;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.empty-users {
+  margin-left: 7px;
+}

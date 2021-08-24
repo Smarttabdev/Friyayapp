@@ -1,0 +1,45 @@
+.chat-button {
+  display: flex;
+  align-items: center;
+  color: #d4b042;
+  font-size: smaller;
+  cursor: pointer;
+}
+
+.video-button {
+  //margin-right: 12px;
+}
+
+.icon {
+  font-size: 20px;
+  position: relative;
+}
+
+.icon-size {
+  font-size: 22px;
+}
+
+.count {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #eb5757;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  padding: 0 1px 1px 0;
+}
+
+.video-button-color {
+  color: #eb5757;
+}
+
+.chat-panel-container {
+  font-size: 14px;
+  width: 400px;
+}
